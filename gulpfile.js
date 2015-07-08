@@ -43,8 +43,8 @@ var addVersions = function() {
     }
     path.basename = base;
     path.dirname = '';
-  })
-}
+  });
+};
 
 // 2. VARIABLES
 // - - - - - - - - - - - - - - -
@@ -97,7 +97,7 @@ var paths = {
       'docs/assets/js/app.js'
     ]
   }
-}
+};
 
 // 3. CLEANIN' FILES
 // - - - - - - - - - - - - - - -
@@ -342,7 +342,7 @@ gulp.task('deploy:dist', ['clean:dist'], function(cb) {
     .pipe(gulp.dest('./dist/js'))
     .pipe($.uglify())
     .pipe($.rename('foundation-apps-templates.min.js'))
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest('./dist/js'));
 
   cb();
 });
